@@ -1,0 +1,21 @@
+body{
+    background_color:lightblue;
+    color:red;
+}
+table,thead,th,tr,td{
+    background-color:dimgray;
+    color:darkgreen;
+    border:2px solid maroon;
+    font-size:20px;
+    margin:auto;
+}
+thead,th{
+    background_color:lightyellow;
+    color:blue;
+    border:2px solid black;
+    font-size:25px;
+    margin:auto;
+}
+h1{
+    text-align:center
+}

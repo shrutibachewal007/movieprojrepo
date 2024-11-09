@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>movies-list</title>
+    <link rel="stylesheet" href="{% static "css/movies.css"%}">
+</head>
+<body>
+    <h1>movie list details!!</h1>
+    <hr />
+    {%if movies_list%}
+    <table>
+        <thead>
+            <th>Release-date</th>
+            <th>Movie-name</th>
+            <th>Actor</th>
+            <th>Actress</th>
+            <th>Rating</th>
+        </thead>
+        <tbody>
+        {% for movie in movies_list %}
+        <tr>
+            <td>{{ movie.releasedate }}</td>
+            <td>{{ movie.moviename }}</td>
+            <td>{{ movie.actor }}</td>
+            <td>{{ movie.actress }}</td>
+            <td>{{ movie.rating }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/">homepage</a>
+    {% else %}
+        <p>oops.....no movies found!!</p>
+    {%endif%}
+</body>
+</html>
